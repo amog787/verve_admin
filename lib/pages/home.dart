@@ -60,9 +60,8 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           showModalBottomSheet(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(6.0),
-                topRight: Radius.circular(6.0),
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(6.0),
               ),
             ),
             context: context,
