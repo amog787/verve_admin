@@ -19,6 +19,9 @@ class _HomePageState extends State<HomePage> {
     AccountsScreen(),
     Center(
       child: Text('Users'),
+    ),
+    Center(
+      child: Text('Activity'),
     )
   ];
 
@@ -82,6 +85,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
             title: Text('Users'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.access_time),
+            title: Text('Activity'),
           ),
         ],
         currentIndex: _currentIndex,
