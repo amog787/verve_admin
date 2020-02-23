@@ -50,6 +50,11 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: _children[_currentIndex],
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.attach_money),
+        tooltip: 'Settle',
+        onPressed: () {},
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
