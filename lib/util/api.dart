@@ -73,7 +73,8 @@ Future<Map<String, dynamic>> performGet(String endpoint) async {
 }
 
 // POST 'accounts'
-Future<dynamic> performPost(String endpoint, Map<String, dynamic> body) async {
+Future<Map<String, dynamic>> performPost(
+    String endpoint, Map<String, dynamic> body) async {
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   String token = sharedPreferences.getString('token');
   try {
@@ -94,7 +95,8 @@ Future<dynamic> performPost(String endpoint, Map<String, dynamic> body) async {
 }
 
 // PUT 'users/booklet'
-Future<dynamic> performPut(String endpoint, Map<String, dynamic> body) async {
+Future<Map<String, dynamic>> performPut(
+    String endpoint, Map<String, dynamic> body) async {
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   String token = sharedPreferences.getString('token');
   try {
