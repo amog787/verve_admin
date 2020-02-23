@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'login.dart';
+import '../screens/account_settle.dart';
 import '../screens/accounts.dart';
 import '../util/api.dart';
 
@@ -53,7 +54,20 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.attach_money),
         tooltip: 'Settle',
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(6.0),
+                topRight: Radius.circular(6.0),
+              ),
+            ),
+            context: context,
+            builder: (context) {
+              return AccountForm();
+            },
+          );
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
