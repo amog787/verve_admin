@@ -83,7 +83,11 @@ class _AccountFormState extends State<AccountForm> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+      padding: EdgeInsets.only(
+          top: 16,
+          right: 16,
+          left: 16,
+          bottom: MediaQuery.of(context).viewInsets.bottom + 16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
