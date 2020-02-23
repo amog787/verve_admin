@@ -3,7 +3,23 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 import '../util/api.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+  final List<Widget> _children = [
+    Center(
+      child: Text('Dashboard'),
+    ),
+    AccountsScreen(),
+    Center(
+      child: Text('Users'),
+    )
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
