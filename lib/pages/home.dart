@@ -65,9 +65,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             context: context,
-            builder: (context) {
-              return AccountForm();
-            },
+            isScrollControlled: true,
+            builder: (context) => AccountForm(),
           );
         },
       ),
