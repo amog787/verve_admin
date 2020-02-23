@@ -93,16 +93,14 @@ class _AccountFormState extends State<AccountForm> {
                 child: TextField(
                   autocorrect: false,
                   autofocus: true,
-                  decoration: InputDecoration(
-                    hintText: 'Enter the USN',
-                  ),
+                  decoration: InputDecoration(hintText: 'Enter USN'),
                   controller: _usnController,
                 ),
               ),
               SizedBox(width: 20.0),
               Expanded(
                 child: TextField(
-                  decoration: InputDecoration(hintText: 'Enter the amount'),
+                  decoration: InputDecoration(hintText: 'Enter amount'),
                   keyboardType: TextInputType.number,
                   inputFormatters: <TextInputFormatter>[
                     WhitelistingTextInputFormatter.digitsOnly
