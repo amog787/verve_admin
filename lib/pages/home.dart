@@ -51,6 +51,28 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Text('YOLO'),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            title: Text('Dashboard'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_balance_wallet),
+            title: Text('Accounts'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            title: Text('Users'),
+          ),
+        ],
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }
