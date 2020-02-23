@@ -125,15 +125,20 @@ class _AccountFormState extends State<AccountForm> {
             children: <Widget>[
               Expanded(
                 child: RaisedButton(
+                  color: Colors.blue,
+                  child: Text(
+                    'Settle'.toUpperCase(),
+                    style: TextStyle(
+                      letterSpacing: 0.5,
+                      fontSize: 16.0,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(2.0),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Text(
-                    'Settle',
-                    style: TextStyle(fontSize: 16.0),
-                  ),
-                  color: Colors.blue,
                   onPressed: _isValidForm ? _handleSubmit : null,
                 ),
               ),
